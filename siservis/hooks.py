@@ -11,6 +11,28 @@ app_license = "mit"
 fixtures = [
     "Custom Field",
     "Property Setter",
+    {
+        "dt": "Role",
+        "filters": [
+            ["name", "in", ["Technician", "Cashier", "Inventory Staff"]]
+        ]
+    },
+    {
+        "dt": "Custom DocPerm",
+        "filters": [
+            ["role", "in", ["Technician", "Cashier", "Inventory Staff"]]
+        ]
+    },
+    {
+        "dt": "User",
+        "filters": [
+            ["name", "in", [
+                "technician@siservis.com",
+                "cashier@siservis.com",
+                "inventory@siservis.com"
+            ]]
+        ]
+    }
     # "Client Script",
 
     # "Item Group",

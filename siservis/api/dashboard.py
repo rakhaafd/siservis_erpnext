@@ -6,10 +6,9 @@ def format_idr(value):
     value = float(value or 0)
     return "Rp {:,.0f}".format(value).replace(",", ".")
 
-
-# @frappe.whitelist()
-# def low_stock_alert():
-#     return get_low_stock_items()
+@frappe.whitelist()
+def low_stock_alert():
+    return get_low_stock_items()
 
 @frappe.whitelist()
 def dashboard_summary():
