@@ -65,7 +65,7 @@ def create_sales_invoice(service_report):
     invoice.due_date = frappe.utils.today()
     invoice.update_stock = 1
 
-    default_warehouse = "Sparepart Warehouse - siservis"
+    default_warehouse = "siwarehouse - MS"
 
     for part in report.parts_used:
         item = frappe.get_doc("Item", part.item)
